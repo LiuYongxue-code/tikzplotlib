@@ -1,0 +1,829 @@
+\documentclass%[border=5mm]
+{standalone}
+%\usepackage{amsmath}
+\usepackage{xcolor,times}
+\usepackage{pgfplots}
+\usepgfplotslibrary{groupplots}
+\usetikzlibrary{patterns}
+\usepackage{tikz}
+\begin{document}
+\pgfplotsset{width=18cm,height=10cm}
+\begin{tikzpicture}
+
+\definecolor{darkgray176}{RGB}{176,176,176}
+\definecolor{darkkhaki}{RGB}{189,183,107}
+\definecolor{darkorange25512714}{RGB}{255,127,14}
+\definecolor{lightgray}{RGB}{211,211,211}
+\definecolor{royalblue}{RGB}{65,105,225}
+\definecolor{silver}{RGB}{192,192,192}
+
+\begin{axis}[
+tick align=outside,
+tick pos=left,
+title={Comparison of IID Bootstrap Resampling Across Five Distributions},
+x grid style={darkgray176},
+%xlabel={Distribution},
+xmin=0.5, xmax=10.5,
+xtick style={color=black},
+xtick={1,2,3,4,5,6,7,8,9,10},
+xticklabel style={rotate=45.0},
+xticklabels={
+  {Normal(1, 1)},
+  {Normal(1, 1)},
+  {Lognormal(1, 1)},
+  {Lognormal(1, 1)},
+  Exp(1),
+  Exp(1),
+  {Gumbel(6, 4)},
+  {Gumbel(6, 4)},
+  {Triangular(2, 9, 11)},
+  {Triangular(2, 9, 11)}
+},
+y grid style={lightgray},
+ylabel={Value},
+ymajorgrids,
+ymin=-5, ymax=40,
+ytick style={color=black}
+]
+\path [draw=none, fill=darkkhaki]
+(axis cs:0.75,0.282285101342398)
+--(axis cs:1.25,0.282285101342398)
+--(axis cs:1.25,1.57213919988616)
+--(axis cs:0.75,1.57213919988616)
+--cycle;
+\path [draw=none, fill=royalblue]
+(axis cs:1.75,0.291773155357964)
+--(axis cs:2.25,0.291773155357964)
+--(axis cs:2.25,1.55855786993571)
+--(axis cs:1.75,1.55855786993571)
+--cycle;
+\path [draw=none, fill=darkkhaki]
+(axis cs:2.75,1.3758932501949)
+--(axis cs:3.25,1.3758932501949)
+--(axis cs:3.25,5.15476439674386)
+--(axis cs:2.75,5.15476439674386)
+--cycle;
+\path [draw=none, fill=royalblue]
+(axis cs:3.75,1.38588752672438)
+--(axis cs:4.25,1.38588752672438)
+--(axis cs:4.25,5.79527571875704)
+--(axis cs:3.75,5.79527571875704)
+--cycle;
+\path [draw=none, fill=darkkhaki]
+(axis cs:4.75,0.29192362286666)
+--(axis cs:5.25,0.29192362286666)
+--(axis cs:5.25,1.36077735144596)
+--(axis cs:4.75,1.36077735144596)
+--cycle;
+\path [draw=none, fill=royalblue]
+(axis cs:5.75,0.298236630243663)
+--(axis cs:6.25,0.298236630243663)
+--(axis cs:6.25,1.41176278412507)
+--(axis cs:5.75,1.41176278412507)
+--cycle;
+\path [draw=none, fill=darkkhaki]
+(axis cs:6.75,4.62725032969732)
+--(axis cs:7.25,4.62725032969732)
+--(axis cs:7.25,10.68974644989)
+--(axis cs:6.75,10.68974644989)
+--cycle;
+\path [draw=none, fill=royalblue]
+(axis cs:7.75,4.83759974590826)
+--(axis cs:8.25,4.83759974590826)
+--(axis cs:8.25,11.146489936868)
+--(axis cs:7.75,11.146489936868)
+--cycle;
+\path [draw=none, fill=darkkhaki]
+(axis cs:8.75,6.07522125017931)
+--(axis cs:9.25,6.07522125017931)
+--(axis cs:9.25,8.87163796475588)
+--(axis cs:8.75,8.87163796475588)
+--cycle;
+\path [draw=none, fill=royalblue]
+(axis cs:9.75,6.08082105377902)
+--(axis cs:10.25,6.08082105377902)
+--(axis cs:10.25,9.00486519834813)
+--(axis cs:9.75,9.00486519834813)
+--cycle;
+\addplot [black]
+table {%
+0.75 0.282285101342398
+1.25 0.282285101342398
+1.25 1.57213919988616
+0.75 1.57213919988616
+0.75 0.282285101342398
+};
+\addplot [black]
+table {%
+1 0.282285101342398
+1 -1.5789788192459
+};
+\addplot [black]
+table {%
+1 1.57213919988616
+1 3.2846443918256
+};
+\addplot [black]
+table {%
+0.875 -1.5789788192459
+1.125 -1.5789788192459
+};
+\addplot [black]
+table {%
+0.875 3.2846443918256
+1.125 3.2846443918256
+};
+\addplot [red, mark=+, mark size=3, mark options={solid,fill opacity=0,draw=black}, only marks]
+table {%
+1 -1.76081950374039
+1 -1.73876235132679
+1 -1.71142014784633
+1 3.78024346967552
+1 3.86322897813891
+};
+\addplot [black]
+table {%
+1.75 0.291773155357964
+2.25 0.291773155357964
+2.25 1.55855786993571
+1.75 1.55855786993571
+1.75 0.291773155357964
+};
+\addplot [black]
+table {%
+2 0.291773155357964
+2 -1.5789788192459
+};
+\addplot [black]
+table {%
+2 1.55855786993571
+2 3.2846443918256
+};
+\addplot [black]
+table {%
+1.875 -1.5789788192459
+2.125 -1.5789788192459
+};
+\addplot [black]
+table {%
+1.875 3.2846443918256
+2.125 3.2846443918256
+};
+\addplot [red, mark=+, mark size=3, mark options={solid,fill opacity=0,draw=black}, only marks]
+table {%
+2 -1.71142014784633
+2 -1.71142014784633
+2 -1.76081950374039
+2 3.86322897813891
+2 3.86322897813891
+2 3.86322897813891
+};
+\addplot [black]
+table {%
+2.75 1.3758932501949
+3.25 1.3758932501949
+3.25 5.15476439674386
+2.75 5.15476439674386
+2.75 1.3758932501949
+};
+\addplot [black]
+table {%
+3 1.3758932501949
+3 0.141707066615081
+};
+\addplot [black]
+table {%
+3 5.15476439674386
+3 10.7612721827913
+};
+\addplot [black]
+table {%
+2.875 0.141707066615081
+3.125 0.141707066615081
+};
+\addplot [black]
+table {%
+2.875 10.7612721827913
+3.125 10.7612721827913
+};
+\addplot [red, mark=+, mark size=3, mark options={solid,fill opacity=0,draw=black}, only marks]
+table {%
+3 14.340916766114
+3 13.2012407285016
+3 40.8433509759664
+3 23.959563689612
+3 11.9314991862497
+3 18.5966264141782
+3 14.6977144791248
+3 19.6818427176879
+3 12.0438709638824
+3 12.4691258023594
+3 25.2276063512195
+3 12.1600513170798
+3 10.8402613910545
+3 23.4640208646381
+3 16.3277875118919
+3 10.9672897581839
+3 14.2562497865494
+3 17.5380367435013
+3 36.2786045568263
+3 11.6958099428261
+3 12.6998670797447
+3 14.4587255724623
+3 13.8891442953194
+3 25.3156974779306
+3 14.2343803770494
+3 16.4230506253706
+3 12.251182444257
+3 73.8586547064924
+3 11.8507877980147
+3 11.2781834677383
+3 13.267215783862
+3 13.0555441998093
+3 13.0424133580761
+3 14.2513450267967
+3 21.0756347386579
+3 13.2154251180178
+3 15.2732781316163
+3 16.9525672724397
+};
+\addplot [black]
+table {%
+3.75 1.38588752672438
+4.25 1.38588752672438
+4.25 5.79527571875704
+3.75 5.79527571875704
+3.75 1.38588752672438
+};
+\addplot [black]
+table {%
+4 1.38588752672438
+4 0.244843967857864
+};
+\addplot [black]
+table {%
+4 5.79527571875704
+4 12.251182444257
+};
+\addplot [black]
+table {%
+3.875 0.244843967857864
+4.125 0.244843967857864
+};
+\addplot [black]
+table {%
+3.875 12.251182444257
+4.125 12.251182444257
+};
+\addplot [red, mark=+, mark size=3, mark options={solid,fill opacity=0,draw=black}, only marks]
+table {%
+4 40.8433509759664
+4 12.6998670797447
+4 13.2012407285016
+4 15.2732781316163
+4 16.3277875118919
+4 14.2562497865494
+4 25.2276063512195
+4 14.6977144791248
+4 40.8433509759664
+4 13.267215783862
+4 13.2154251180178
+4 13.2012407285016
+4 14.2562497865494
+4 18.5966264141782
+4 13.267215783862
+4 23.959563689612
+4 16.4230506253706
+4 14.2562497865494
+4 23.4640208646381
+4 14.340916766114
+4 14.2562497865494
+4 13.0424133580761
+4 14.6977144791248
+4 13.0555441998093
+};
+\addplot [black]
+table {%
+4.75 0.29192362286666
+5.25 0.29192362286666
+5.25 1.36077735144596
+4.75 1.36077735144596
+4.75 0.29192362286666
+};
+\addplot [black]
+table {%
+5 0.29192362286666
+5 0.00457370270701306
+};
+\addplot [black]
+table {%
+5 1.36077735144596
+5 2.89486368017204
+};
+\addplot [black]
+table {%
+4.875 0.00457370270701306
+5.125 0.00457370270701306
+};
+\addplot [black]
+table {%
+4.875 2.89486368017204
+5.125 2.89486368017204
+};
+\addplot [red, mark=+, mark size=3, mark options={solid,fill opacity=0,draw=black}, only marks]
+table {%
+5 3.8850726579994
+5 3.28157435745292
+5 6.4299877028577
+5 3.34057523648967
+5 3.47464322919173
+5 3.9194728293079
+5 2.99969242078429
+5 6.19924254259685
+5 3.16336825991883
+5 3.95601197808717
+5 3.02672069684696
+5 3.36394087547809
+5 3.46110465587295
+5 12.1028913893587
+5 3.4750130295113
+5 2.9701228806528
+5 3.05177943942471
+5 3.67891452578882
+5 3.80913036497721
+5 4.03857835622818
+5 3.07876035831666
+5 3.70085618377603
+};
+\addplot [black]
+table {%
+5.75 0.298236630243663
+6.25 0.298236630243663
+6.25 1.41176278412507
+5.75 1.41176278412507
+5.75 0.298236630243663
+};
+\addplot [black]
+table {%
+6 0.298236630243663
+6 0.00457370270701306
+};
+\addplot [black]
+table {%
+6 1.41176278412507
+6 2.99969242078429
+};
+\addplot [black]
+table {%
+5.875 0.00457370270701306
+6.125 0.00457370270701306
+};
+\addplot [black]
+table {%
+5.875 2.99969242078429
+6.125 2.99969242078429
+};
+\addplot [red, mark=+, mark size=3, mark options={solid,fill opacity=0,draw=black}, only marks]
+table {%
+6 3.34057523648967
+6 3.8850726579994
+6 12.1028913893587
+6 3.34057523648967
+6 3.28157435745292
+6 3.4750130295113
+6 3.34057523648967
+6 3.34057523648967
+6 3.46110465587295
+6 3.4750130295113
+6 3.36394087547809
+6 6.19924254259685
+6 3.28157435745292
+6 3.47464322919173
+6 3.16336825991883
+6 3.95601197808717
+6 12.1028913893587
+6 3.36394087547809
+};
+\addplot [black]
+table {%
+6.75 4.62725032969732
+7.25 4.62725032969732
+7.25 10.68974644989
+6.75 10.68974644989
+6.75 4.62725032969732
+};
+\addplot [black]
+table {%
+7 4.62725032969732
+7 -1.96121115508729
+};
+\addplot [black]
+table {%
+7 10.68974644989
+7 19.6170251302285
+};
+\addplot [black]
+table {%
+6.875 -1.96121115508729
+7.125 -1.96121115508729
+};
+\addplot [black]
+table {%
+6.875 19.6170251302285
+7.125 19.6170251302285
+};
+\addplot [red, mark=+, mark size=3, mark options={solid,fill opacity=0,draw=black}, only marks]
+table {%
+7 26.4310938301092
+7 22.8429882955773
+7 20.5050714289431
+7 24.9353197655607
+7 20.455918542678
+7 19.9705249871635
+7 39.4567204237348
+7 25.3202368358137
+7 21.8369336760464
+7 20.817438554602
+7 20.9949692813965
+7 37.5013763153867
+7 21.4709244399398
+7 20.4099063405395
+7 28.9234768264341
+};
+\addplot [black]
+table {%
+7.75 4.83759974590826
+8.25 4.83759974590826
+8.25 11.146489936868
+7.75 11.146489936868
+7.75 4.83759974590826
+};
+\addplot [black]
+table {%
+8 4.83759974590826
+8 -1.96121115508729
+};
+\addplot [black]
+table {%
+8 11.146489936868
+8 20.455918542678
+};
+\addplot [black]
+table {%
+7.875 -1.96121115508729
+8.125 -1.96121115508729
+};
+\addplot [black]
+table {%
+7.875 20.455918542678
+8.125 20.455918542678
+};
+\addplot [red, mark=+, mark size=3, mark options={solid,fill opacity=0,draw=black}, only marks]
+table {%
+8 24.9353197655607
+8 24.9353197655607
+8 28.9234768264341
+8 26.4310938301092
+8 20.817438554602
+8 22.8429882955773
+8 20.817438554602
+8 37.5013763153867
+8 22.8429882955773
+8 28.9234768264341
+};
+\addplot [black]
+table {%
+8.75 6.07522125017931
+9.25 6.07522125017931
+9.25 8.87163796475588
+8.75 8.87163796475588
+8.75 6.07522125017931
+};
+\addplot [black]
+table {%
+9 6.07522125017931
+9 2.10135874934538
+};
+\addplot [black]
+table {%
+9 8.87163796475588
+9 10.8775093409762
+};
+\addplot [black]
+table {%
+8.875 2.10135874934538
+9.125 2.10135874934538
+};
+\addplot [black]
+table {%
+8.875 10.8775093409762
+9.125 10.8775093409762
+};
+\addplot [black]
+table {%
+9.75 6.08082105377902
+10.25 6.08082105377902
+10.25 9.00486519834813
+9.75 9.00486519834813
+9.75 6.08082105377902
+};
+\addplot [black]
+table {%
+10 6.08082105377902
+10 2.10135874934538
+};
+\addplot [black]
+table {%
+10 9.00486519834813
+10 10.8775093409762
+};
+\addplot [black]
+table {%
+9.875 2.10135874934538
+10.125 2.10135874934538
+};
+\addplot [black]
+table {%
+9.875 10.8775093409762
+10.125 10.8775093409762
+};
+\addplot [semithick, black]
+table {%
+0.75 0.949866593757657
+};
+\addplot [semithick, black]
+table {%
+0.75 0.949866593757657
+1.25 0.949866593757657
+};
+\addplot [semithick, white, mark=asterisk, mark size=3, mark options={solid,draw=black}]
+table {%
+1 0.931879320408568
+};
+\addplot [semithick, black]
+table {%
+1.75 0.938911410430736
+};
+\addplot [semithick, black]
+table {%
+1.75 0.938911410430736
+2.25 0.938911410430736
+};
+\addplot [semithick, white, mark=asterisk, mark size=3, mark options={solid,draw=black}]
+table {%
+2 0.948805841505051
+};
+\addplot [semithick, black]
+table {%
+2.75 2.66986128587499
+};
+\addplot [semithick, black]
+table {%
+2.75 2.66986128587499
+3.25 2.66986128587499
+};
+\addplot [semithick, white, mark=asterisk, mark size=3, mark options={solid,draw=black}]
+table {%
+3 4.28835911049826
+};
+\addplot [semithick, black]
+table {%
+3.75 2.65909638676779
+};
+\addplot [semithick, black]
+table {%
+3.75 2.65909638676779
+4.25 2.65909638676779
+};
+\addplot [semithick, white, mark=asterisk, mark size=3, mark options={solid,draw=black}]
+table {%
+4 4.13729706864678
+};
+\addplot [semithick, black]
+table {%
+4.75 0.668001034542229
+};
+\addplot [semithick, black]
+table {%
+4.75 0.668001034542229
+5.25 0.668001034542229
+};
+\addplot [semithick, white, mark=asterisk, mark size=3, mark options={solid,draw=black}]
+table {%
+5 0.971674550419845
+};
+\addplot [semithick, black]
+table {%
+5.75 0.710360456645804
+};
+\addplot [semithick, black]
+table {%
+5.75 0.710360456645804
+6.25 0.710360456645804
+};
+\addplot [semithick, white, mark=asterisk, mark size=3, mark options={solid,draw=black}]
+table {%
+6 1.01048927223097
+};
+\addplot [semithick, black]
+table {%
+6.75 7.32371368068799
+};
+\addplot [semithick, black]
+table {%
+6.75 7.32371368068799
+7.25 7.32371368068799
+};
+\addplot [semithick, white, mark=asterisk, mark size=3, mark options={solid,draw=black}]
+table {%
+7 8.20403945761436
+};
+\addplot [semithick, black]
+table {%
+7.75 7.14534468837011
+};
+\addplot [semithick, black]
+table {%
+7.75 7.14534468837011
+8.25 7.14534468837011
+};
+\addplot [semithick, white, mark=asterisk, mark size=3, mark options={solid,draw=black}]
+table {%
+8 8.10546031775997
+};
+\addplot [semithick, black]
+table {%
+8.75 7.75453020183344
+};
+\addplot [semithick, black]
+table {%
+8.75 7.75453020183344
+9.25 7.75453020183344
+};
+\addplot [semithick, white, mark=asterisk, mark size=3, mark options={solid,draw=black}]
+table {%
+9 7.42024516630883
+};
+\addplot [semithick, black]
+table {%
+9.75 7.80543105341679
+};
+\addplot [semithick, black]
+table {%
+9.75 7.80543105341679
+10.25 7.80543105341679
+};
+\addplot [semithick, white, mark=asterisk, mark size=3, mark options={solid,draw=black}]
+table {%
+10 7.48346142854294
+};
+\addplot [darkorange25512714]
+table {%
+0.75 0.949866593757657
+1.25 0.949866593757657
+};
+\addplot [darkorange25512714]
+table {%
+1.75 0.938911410430736
+2.25 0.938911410430736
+};
+\addplot [darkorange25512714]
+table {%
+2.75 2.66986128587499
+3.25 2.66986128587499
+};
+\addplot [darkorange25512714]
+table {%
+3.75 2.65909638676779
+4.25 2.65909638676779
+};
+\addplot [darkorange25512714]
+table {%
+4.75 0.668001034542229
+5.25 0.668001034542229
+};
+\addplot [darkorange25512714]
+table {%
+5.75 0.710360456645804
+6.25 0.710360456645804
+};
+\addplot [darkorange25512714]
+table {%
+6.75 7.32371368068799
+7.25 7.32371368068799
+};
+\addplot [darkorange25512714]
+table {%
+7.75 7.14534468837011
+8.25 7.14534468837011
+};
+\addplot [darkorange25512714]
+table {%
+8.75 7.75453020183344
+9.25 7.75453020183344
+};
+\addplot [darkorange25512714]
+table {%
+9.75 7.80543105341679
+10.25 7.80543105341679
+};
+\draw (axis cs:1,0.95) node[
+  scale=0.347,
+  anchor=base,
+  text=darkkhaki,
+  rotate=0.0
+]{\bfseries 0.95};
+\draw (axis cs:2,0.95) node[
+  scale=0.347,
+  anchor=base,
+  text=royalblue,
+  rotate=0.0
+]{\bfseries 0.94};
+\draw (axis cs:3,0.95) node[
+  scale=0.347,
+  anchor=base,
+  text=darkkhaki,
+  rotate=0.0
+]{\bfseries 2.67};
+\draw (axis cs:4,0.95) node[
+  scale=0.347,
+  anchor=base,
+  text=royalblue,
+  rotate=0.0
+]{\bfseries 2.66};
+\draw (axis cs:5,0.95) node[
+  scale=0.347,
+  anchor=base,
+  text=darkkhaki,
+  rotate=0.0
+]{\bfseries 0.67};
+\draw (axis cs:6,0.95) node[
+  scale=0.347,
+  anchor=base,
+  text=royalblue,
+  rotate=0.0
+]{\bfseries 0.71};
+\draw (axis cs:7,0.95) node[
+  scale=0.347,
+  anchor=base,
+  text=darkkhaki,
+  rotate=0.0
+]{\bfseries 7.32};
+\draw (axis cs:8,0.95) node[
+  scale=0.347,
+  anchor=base,
+  text=royalblue,
+  rotate=0.0
+]{\bfseries 7.15};
+\draw (axis cs:9,0.95) node[
+  scale=0.347,
+  anchor=base,
+  text=darkkhaki,
+  rotate=0.0
+]{\bfseries 7.75};
+\draw (axis cs:10,0.95) node[
+  scale=0.347,
+  anchor=base,
+  text=royalblue,
+  rotate=0.0
+]{\bfseries 7.81};
+\end{axis}
+
+\draw ({$(current bounding box.south west)!0.8!(current bounding box.south east)$}|-{$(current bounding box.south west)!0.08!(current bounding box.north west)$}) node[
+  scale=0.347,
+  fill=darkkhaki,
+  draw=darkkhaki,
+  line width=0.4pt,
+  inner sep=4pt,
+  anchor=base west,
+  text=black,
+  rotate=0.0
+]{500 Random Numbers};
+\draw ({$(current bounding box.south west)!0.8!(current bounding box.south east)$}|-{$(current bounding box.south west)!0.045!(current bounding box.north west)$}) node[
+  scale=0.347,
+  fill=royalblue,
+  draw=royalblue,
+  line width=0.4pt,
+  inner sep=4pt,
+  anchor=base west,
+  text=white,
+  rotate=0.0
+]{IID Bootstrap Resample};
+\draw ({$(current bounding box.south west)!0.8!(current bounding box.south east)$}|-{$(current bounding box.south west)!0.015!(current bounding box.north west)$}) node[
+  scale=0.5,
+  fill=silver,
+  draw=silver,
+  line width=0.4pt,
+  inner sep=4pt,
+  anchor=base west,
+  text=white,
+  rotate=0.0
+]{*};
+\draw ({$(current bounding box.south west)!0.815!(current bounding box.south east)$}|-{$(current bounding box.south west)!0.013!(current bounding box.north west)$}) node[
+  scale=0.347,
+  anchor=base west,
+  text=black,
+  rotate=0.0
+]{ Average Value};
+\end{tikzpicture}
+\end{document}

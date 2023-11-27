@@ -1,0 +1,950 @@
+\documentclass%[border=5mm]
+{standalone}
+\usepackage{tikz}
+\usepackage{xcolor,times}
+\usepackage{pgfplots}
+\usepgfplotslibrary{groupplots}
+\usetikzlibrary{patterns}
+\usepackage{pgfplots}
+\usepgfplotslibrary{groupplots}
+\usepgfplotslibrary{groupplots}
+\begin{document}
+%\pgfplotsset{width=18cm,height=10cm}
+
+\begin{tikzpicture}
+
+\definecolor{darkcyan30152138}{RGB}{30,152,138}
+\definecolor{darkcyan30157136}{RGB}{30,157,136}
+\definecolor{darkcyan30158136}{RGB}{30,158,136}
+\definecolor{darkcyan32143140}{RGB}{32,143,140}
+\definecolor{darkcyan34137141}{RGB}{34,137,141}
+\definecolor{darkcyan35136141}{RGB}{35,136,141}
+\definecolor{darkcyan36132141}{RGB}{36,132,141}
+\definecolor{darkcyan36134141}{RGB}{36,134,141}
+\definecolor{darkslateblue48104141}{RGB}{48,104,141}
+\definecolor{darkslateblue5098141}{RGB}{50,98,141}
+\definecolor{darkslateblue5099141}{RGB}{50,99,141}
+\definecolor{darkslateblue5197141}{RGB}{51,97,141}
+\definecolor{darkslateblue5294141}{RGB}{52,94,141}
+\definecolor{darkslateblue5686139}{RGB}{56,86,139}
+\definecolor{darkslateblue6174137}{RGB}{61,74,137}
+\definecolor{darkslateblue6272136}{RGB}{62,72,136}
+\definecolor{darkslateblue6468135}{RGB}{64,68,135}
+\definecolor{darkslateblue6566134}{RGB}{65,66,134}
+\definecolor{darkslateblue6662133}{RGB}{66,62,133}
+\definecolor{darkslateblue6758131}{RGB}{67,58,131}
+\definecolor{darkslateblue7142121}{RGB}{71,42,121}
+\definecolor{darkslateblue7143122}{RGB}{71,43,122}
+\definecolor{dimgray85}{RGB}{85,85,85}
+\definecolor{gainsboro229}{RGB}{229,229,229}
+\definecolor{gold21522625}{RGB}{215,226,25}
+\definecolor{gold21822624}{RGB}{218,226,24}
+\definecolor{gold22022624}{RGB}{220,226,24}
+\definecolor{gold22322724}{RGB}{223,227,24}
+\definecolor{gold24823033}{RGB}{248,230,33}
+\definecolor{gold25023034}{RGB}{250,230,34}
+\definecolor{gold25323136}{RGB}{253,231,36}
+\definecolor{greenyellow20522429}{RGB}{205,224,29}
+\definecolor{indigo68184}{RGB}{68,1,84}
+\definecolor{indigo711799}{RGB}{71,17,99}
+\definecolor{indigo7225107}{RGB}{72,25,107}
+\definecolor{indigo7226108}{RGB}{72,26,108}
+\definecolor{indigo7233114}{RGB}{72,33,114}
+\definecolor{mediumseagreen38172129}{RGB}{38,172,129}
+\definecolor{mediumseagreen41175127}{RGB}{41,175,127}
+\definecolor{mediumseagreen47179123}{RGB}{47,179,123}
+\definecolor{mediumseagreen66190113}{RGB}{66,190,113}
+\definecolor{mediumseagreen68190112}{RGB}{68,190,112}
+\definecolor{mediumseagreen69191111}{RGB}{69,191,111}
+\definecolor{mediumseagreen71192110}{RGB}{71,192,110}
+\definecolor{mediumseagreen73193109}{RGB}{73,193,109}
+\definecolor{mediumseagreen79195105}{RGB}{79,195,105}
+\definecolor{mediumseagreen89199100}{RGB}{89,199,100}
+\definecolor{mediumseagreen9120098}{RGB}{91,200,98}
+\definecolor{mediumseagreen9620196}{RGB}{96,201,96}
+\definecolor{steelblue45111142}{RGB}{45,111,142}
+\definecolor{teal44114142}{RGB}{44,114,142}
+\definecolor{yellowgreen11620884}{RGB}{116,208,84}
+\definecolor{yellowgreen12921176}{RGB}{129,211,76}
+\definecolor{yellowgreen14421467}{RGB}{144,214,67}
+\definecolor{yellowgreen15921756}{RGB}{159,217,56}
+
+\begin{groupplot}[group style={group size=2 by 1}]
+\nextgroupplot[
+axis background/.style={fill=gainsboro229},
+axis line style={white},
+tick align=outside,
+tick pos=left,
+title={default: no edges},
+x grid style={white},
+xmajorgrids,
+xmin=0, xmax=10,
+xtick style={color=dimgray85},
+y grid style={white},
+ymajorgrids,
+ymin=0, ymax=6,
+ytick style={color=dimgray85}
+]
+\path [fill=mediumseagreen68190112, ultra thin]
+(axis cs:0,0)
+--(axis cs:0,1)
+--(axis cs:1,1)
+--(axis cs:1,0)
+--(axis cs:0,0)
+--cycle;
+\path [fill=mediumseagreen9120098, ultra thin]
+(axis cs:1,0)
+--(axis cs:1,1)
+--(axis cs:2,1)
+--(axis cs:2,0)
+--(axis cs:1,0)
+--cycle;
+\path [fill=mediumseagreen73193109, ultra thin]
+(axis cs:2,0)
+--(axis cs:2,1)
+--(axis cs:3,1)
+--(axis cs:3,0)
+--(axis cs:2,0)
+--cycle;
+\path [fill=darkcyan30157136, ultra thin]
+(axis cs:3,0)
+--(axis cs:3,1)
+--(axis cs:4,1)
+--(axis cs:4,0)
+--(axis cs:3,0)
+--cycle;
+\path [fill=gold25323136, ultra thin]
+(axis cs:4,0)
+--(axis cs:4,1)
+--(axis cs:5,1)
+--(axis cs:5,0)
+--(axis cs:4,0)
+--cycle;
+\path [fill=mediumseagreen71192110, ultra thin]
+(axis cs:5,0)
+--(axis cs:5,1)
+--(axis cs:6,1)
+--(axis cs:6,0)
+--(axis cs:5,0)
+--cycle;
+\path [fill=darkslateblue6272136, ultra thin]
+(axis cs:6,0)
+--(axis cs:6,1)
+--(axis cs:7,1)
+--(axis cs:7,0)
+--(axis cs:6,0)
+--cycle;
+\path [fill=darkslateblue7142121, ultra thin]
+(axis cs:7,0)
+--(axis cs:7,1)
+--(axis cs:8,1)
+--(axis cs:8,0)
+--(axis cs:7,0)
+--cycle;
+\path [fill=mediumseagreen66190113, ultra thin]
+(axis cs:8,0)
+--(axis cs:8,1)
+--(axis cs:9,1)
+--(axis cs:9,0)
+--(axis cs:8,0)
+--cycle;
+\path [fill=mediumseagreen79195105, ultra thin]
+(axis cs:9,0)
+--(axis cs:9,1)
+--(axis cs:10,1)
+--(axis cs:10,0)
+--(axis cs:9,0)
+--cycle;
+\path [fill=darkslateblue6174137, ultra thin]
+(axis cs:0,1)
+--(axis cs:0,2)
+--(axis cs:1,2)
+--(axis cs:1,1)
+--(axis cs:0,1)
+--cycle;
+\path [fill=darkslateblue5098141, ultra thin]
+(axis cs:1,1)
+--(axis cs:1,2)
+--(axis cs:2,2)
+--(axis cs:2,1)
+--(axis cs:1,1)
+--cycle;
+\path [fill=gold24823033, ultra thin]
+(axis cs:2,1)
+--(axis cs:2,2)
+--(axis cs:3,2)
+--(axis cs:3,1)
+--(axis cs:2,1)
+--cycle;
+\path [fill=mediumseagreen66190113, ultra thin]
+(axis cs:3,1)
+--(axis cs:3,2)
+--(axis cs:4,2)
+--(axis cs:4,1)
+--(axis cs:3,1)
+--cycle;
+\path [fill=darkcyan36132141, ultra thin]
+(axis cs:4,1)
+--(axis cs:4,2)
+--(axis cs:5,2)
+--(axis cs:5,1)
+--(axis cs:4,1)
+--cycle;
+\path [fill=mediumseagreen69191111, ultra thin]
+(axis cs:5,1)
+--(axis cs:5,2)
+--(axis cs:6,2)
+--(axis cs:6,1)
+--(axis cs:5,1)
+--cycle;
+\path [fill=darkcyan32143140, ultra thin]
+(axis cs:6,1)
+--(axis cs:6,2)
+--(axis cs:7,2)
+--(axis cs:7,1)
+--(axis cs:6,1)
+--cycle;
+\path [fill=gold22022624, ultra thin]
+(axis cs:7,1)
+--(axis cs:7,2)
+--(axis cs:8,2)
+--(axis cs:8,1)
+--(axis cs:7,1)
+--cycle;
+\path [fill=mediumseagreen89199100, ultra thin]
+(axis cs:8,1)
+--(axis cs:8,2)
+--(axis cs:9,2)
+--(axis cs:9,1)
+--(axis cs:8,1)
+--cycle;
+\path [fill=mediumseagreen38172129, ultra thin]
+(axis cs:9,1)
+--(axis cs:9,2)
+--(axis cs:10,2)
+--(axis cs:10,1)
+--(axis cs:9,1)
+--cycle;
+\path [fill=mediumseagreen47179123, ultra thin]
+(axis cs:0,2)
+--(axis cs:0,3)
+--(axis cs:1,3)
+--(axis cs:1,2)
+--(axis cs:0,2)
+--cycle;
+\path [fill=teal44114142, ultra thin]
+(axis cs:1,2)
+--(axis cs:1,3)
+--(axis cs:2,3)
+--(axis cs:2,2)
+--(axis cs:1,2)
+--cycle;
+\path [fill=darkcyan30152138, ultra thin]
+(axis cs:2,2)
+--(axis cs:2,3)
+--(axis cs:3,3)
+--(axis cs:3,2)
+--(axis cs:2,2)
+--cycle;
+\path [fill=yellowgreen12921176, ultra thin]
+(axis cs:3,2)
+--(axis cs:3,3)
+--(axis cs:4,3)
+--(axis cs:4,2)
+--(axis cs:3,2)
+--cycle;
+\path [fill=mediumseagreen79195105, ultra thin]
+(axis cs:4,2)
+--(axis cs:4,3)
+--(axis cs:5,3)
+--(axis cs:5,2)
+--(axis cs:4,2)
+--cycle;
+\path [fill=darkslateblue5686139, ultra thin]
+(axis cs:5,2)
+--(axis cs:5,3)
+--(axis cs:6,3)
+--(axis cs:6,2)
+--(axis cs:5,2)
+--cycle;
+\path [fill=darkslateblue7143122, ultra thin]
+(axis cs:6,2)
+--(axis cs:6,3)
+--(axis cs:7,3)
+--(axis cs:7,2)
+--(axis cs:6,2)
+--cycle;
+\path [fill=darkslateblue6758131, ultra thin]
+(axis cs:7,2)
+--(axis cs:7,3)
+--(axis cs:8,3)
+--(axis cs:8,2)
+--(axis cs:7,2)
+--cycle;
+\path [fill=indigo7233114, ultra thin]
+(axis cs:8,2)
+--(axis cs:8,3)
+--(axis cs:9,3)
+--(axis cs:9,2)
+--(axis cs:8,2)
+--cycle;
+\path [fill=darkcyan35136141, ultra thin]
+(axis cs:9,2)
+--(axis cs:9,3)
+--(axis cs:10,3)
+--(axis cs:10,2)
+--(axis cs:9,2)
+--cycle;
+\path [fill=darkslateblue5099141, ultra thin]
+(axis cs:0,3)
+--(axis cs:0,4)
+--(axis cs:1,4)
+--(axis cs:1,3)
+--(axis cs:0,3)
+--cycle;
+\path [fill=darkslateblue48104141, ultra thin]
+(axis cs:1,3)
+--(axis cs:1,4)
+--(axis cs:2,4)
+--(axis cs:2,3)
+--(axis cs:1,3)
+--cycle;
+\path [fill=gold25023034, ultra thin]
+(axis cs:2,3)
+--(axis cs:2,4)
+--(axis cs:3,4)
+--(axis cs:3,3)
+--(axis cs:2,3)
+--cycle;
+\path [fill=indigo7225107, ultra thin]
+(axis cs:3,3)
+--(axis cs:3,4)
+--(axis cs:4,4)
+--(axis cs:4,3)
+--(axis cs:3,3)
+--cycle;
+\path [fill=steelblue45111142, ultra thin]
+(axis cs:4,3)
+--(axis cs:4,4)
+--(axis cs:5,4)
+--(axis cs:5,3)
+--(axis cs:4,3)
+--cycle;
+\path [fill=yellowgreen11620884, ultra thin]
+(axis cs:5,3)
+--(axis cs:5,4)
+--(axis cs:6,4)
+--(axis cs:6,3)
+--(axis cs:5,3)
+--cycle;
+\path [fill=gold25023034, ultra thin]
+(axis cs:6,3)
+--(axis cs:6,4)
+--(axis cs:7,4)
+--(axis cs:7,3)
+--(axis cs:6,3)
+--cycle;
+\path [fill=darkcyan35136141, ultra thin]
+(axis cs:7,3)
+--(axis cs:7,4)
+--(axis cs:8,4)
+--(axis cs:8,3)
+--(axis cs:7,3)
+--cycle;
+\path [fill=darkslateblue5197141, ultra thin]
+(axis cs:8,3)
+--(axis cs:8,4)
+--(axis cs:9,4)
+--(axis cs:9,3)
+--(axis cs:8,3)
+--cycle;
+\path [fill=darkcyan30158136, ultra thin]
+(axis cs:9,3)
+--(axis cs:9,4)
+--(axis cs:10,4)
+--(axis cs:10,3)
+--(axis cs:9,3)
+--cycle;
+\path [fill=indigo68184, ultra thin]
+(axis cs:0,4)
+--(axis cs:0,5)
+--(axis cs:1,5)
+--(axis cs:1,4)
+--(axis cs:0,4)
+--cycle;
+\path [fill=steelblue45111142, ultra thin]
+(axis cs:1,4)
+--(axis cs:1,5)
+--(axis cs:2,5)
+--(axis cs:2,4)
+--(axis cs:1,4)
+--cycle;
+\path [fill=greenyellow20522429, ultra thin]
+(axis cs:2,4)
+--(axis cs:2,5)
+--(axis cs:3,5)
+--(axis cs:3,4)
+--(axis cs:2,4)
+--cycle;
+\path [fill=darkslateblue7143122, ultra thin]
+(axis cs:3,4)
+--(axis cs:3,5)
+--(axis cs:4,5)
+--(axis cs:4,4)
+--(axis cs:3,4)
+--cycle;
+\path [fill=mediumseagreen9120098, ultra thin]
+(axis cs:4,4)
+--(axis cs:4,5)
+--(axis cs:5,5)
+--(axis cs:5,4)
+--(axis cs:4,4)
+--cycle;
+\path [fill=mediumseagreen41175127, ultra thin]
+(axis cs:5,4)
+--(axis cs:5,5)
+--(axis cs:6,5)
+--(axis cs:6,4)
+--(axis cs:5,4)
+--cycle;
+\path [fill=darkslateblue5294141, ultra thin]
+(axis cs:6,4)
+--(axis cs:6,5)
+--(axis cs:7,5)
+--(axis cs:7,4)
+--(axis cs:6,4)
+--cycle;
+\path [fill=gold21522625, ultra thin]
+(axis cs:7,4)
+--(axis cs:7,5)
+--(axis cs:8,5)
+--(axis cs:8,4)
+--(axis cs:7,4)
+--cycle;
+\path [fill=darkslateblue6468135, ultra thin]
+(axis cs:8,4)
+--(axis cs:8,5)
+--(axis cs:9,5)
+--(axis cs:9,4)
+--(axis cs:8,4)
+--cycle;
+\path [fill=yellowgreen14421467, ultra thin]
+(axis cs:9,4)
+--(axis cs:9,5)
+--(axis cs:10,5)
+--(axis cs:10,4)
+--(axis cs:9,4)
+--cycle;
+\path [fill=mediumseagreen9620196, ultra thin]
+(axis cs:0,5)
+--(axis cs:0,6)
+--(axis cs:1,6)
+--(axis cs:1,5)
+--(axis cs:0,5)
+--cycle;
+\path [fill=indigo7226108, ultra thin]
+(axis cs:1,5)
+--(axis cs:1,6)
+--(axis cs:2,6)
+--(axis cs:2,5)
+--(axis cs:1,5)
+--cycle;
+\path [fill=yellowgreen15921756, ultra thin]
+(axis cs:2,5)
+--(axis cs:2,6)
+--(axis cs:3,6)
+--(axis cs:3,5)
+--(axis cs:2,5)
+--cycle;
+\path [fill=gold21822624, ultra thin]
+(axis cs:3,5)
+--(axis cs:3,6)
+--(axis cs:4,6)
+--(axis cs:4,5)
+--(axis cs:3,5)
+--cycle;
+\path [fill=darkslateblue6662133, ultra thin]
+(axis cs:4,5)
+--(axis cs:4,6)
+--(axis cs:5,6)
+--(axis cs:5,5)
+--(axis cs:4,5)
+--cycle;
+\path [fill=gold22322724, ultra thin]
+(axis cs:5,5)
+--(axis cs:5,6)
+--(axis cs:6,6)
+--(axis cs:6,5)
+--(axis cs:5,5)
+--cycle;
+\path [fill=darkcyan34137141, ultra thin]
+(axis cs:6,5)
+--(axis cs:6,6)
+--(axis cs:7,6)
+--(axis cs:7,5)
+--(axis cs:6,5)
+--cycle;
+\path [fill=darkcyan36134141, ultra thin]
+(axis cs:7,5)
+--(axis cs:7,6)
+--(axis cs:8,6)
+--(axis cs:8,5)
+--(axis cs:7,5)
+--cycle;
+\path [fill=indigo711799, ultra thin]
+(axis cs:8,5)
+--(axis cs:8,6)
+--(axis cs:9,6)
+--(axis cs:9,5)
+--(axis cs:8,5)
+--cycle;
+\path [fill=darkslateblue6566134, ultra thin]
+(axis cs:9,5)
+--(axis cs:9,6)
+--(axis cs:10,6)
+--(axis cs:10,5)
+--(axis cs:9,5)
+--cycle;
+
+
+\nextgroupplot[
+axis background/.style={fill=gainsboro229},
+axis line style={white},
+tick align=outside,
+tick pos=left,
+title={thick edges},
+x grid style={white},
+xmajorgrids,
+xmin=0, xmax=10,
+xtick style={color=dimgray85},
+y grid style={white},
+ymajorgrids,
+ymin=0, ymax=6,
+ytick style={color=dimgray85}
+]
+\path [draw=black, fill=mediumseagreen68190112, ultra thick]
+(axis cs:0,0)
+--(axis cs:0,1)
+--(axis cs:1,1)
+--(axis cs:1,0)
+--(axis cs:0,0)
+--cycle;
+\path [draw=black, fill=mediumseagreen9120098, ultra thick]
+(axis cs:1,0)
+--(axis cs:1,1)
+--(axis cs:2,1)
+--(axis cs:2,0)
+--(axis cs:1,0)
+--cycle;
+\path [draw=black, fill=mediumseagreen73193109, ultra thick]
+(axis cs:2,0)
+--(axis cs:2,1)
+--(axis cs:3,1)
+--(axis cs:3,0)
+--(axis cs:2,0)
+--cycle;
+\path [draw=black, fill=darkcyan30157136, ultra thick]
+(axis cs:3,0)
+--(axis cs:3,1)
+--(axis cs:4,1)
+--(axis cs:4,0)
+--(axis cs:3,0)
+--cycle;
+\path [draw=black, fill=gold25323136, ultra thick]
+(axis cs:4,0)
+--(axis cs:4,1)
+--(axis cs:5,1)
+--(axis cs:5,0)
+--(axis cs:4,0)
+--cycle;
+\path [draw=black, fill=mediumseagreen71192110, ultra thick]
+(axis cs:5,0)
+--(axis cs:5,1)
+--(axis cs:6,1)
+--(axis cs:6,0)
+--(axis cs:5,0)
+--cycle;
+\path [draw=black, fill=darkslateblue6272136, ultra thick]
+(axis cs:6,0)
+--(axis cs:6,1)
+--(axis cs:7,1)
+--(axis cs:7,0)
+--(axis cs:6,0)
+--cycle;
+\path [draw=black, fill=darkslateblue7142121, ultra thick]
+(axis cs:7,0)
+--(axis cs:7,1)
+--(axis cs:8,1)
+--(axis cs:8,0)
+--(axis cs:7,0)
+--cycle;
+\path [draw=black, fill=mediumseagreen66190113, ultra thick]
+(axis cs:8,0)
+--(axis cs:8,1)
+--(axis cs:9,1)
+--(axis cs:9,0)
+--(axis cs:8,0)
+--cycle;
+\path [draw=black, fill=mediumseagreen79195105, ultra thick]
+(axis cs:9,0)
+--(axis cs:9,1)
+--(axis cs:10,1)
+--(axis cs:10,0)
+--(axis cs:9,0)
+--cycle;
+\path [draw=black, fill=darkslateblue6174137, ultra thick]
+(axis cs:0,1)
+--(axis cs:0,2)
+--(axis cs:1,2)
+--(axis cs:1,1)
+--(axis cs:0,1)
+--cycle;
+\path [draw=black, fill=darkslateblue5098141, ultra thick]
+(axis cs:1,1)
+--(axis cs:1,2)
+--(axis cs:2,2)
+--(axis cs:2,1)
+--(axis cs:1,1)
+--cycle;
+\path [draw=black, fill=gold24823033, ultra thick]
+(axis cs:2,1)
+--(axis cs:2,2)
+--(axis cs:3,2)
+--(axis cs:3,1)
+--(axis cs:2,1)
+--cycle;
+\path [draw=black, fill=mediumseagreen66190113, ultra thick]
+(axis cs:3,1)
+--(axis cs:3,2)
+--(axis cs:4,2)
+--(axis cs:4,1)
+--(axis cs:3,1)
+--cycle;
+\path [draw=black, fill=darkcyan36132141, ultra thick]
+(axis cs:4,1)
+--(axis cs:4,2)
+--(axis cs:5,2)
+--(axis cs:5,1)
+--(axis cs:4,1)
+--cycle;
+\path [draw=black, fill=mediumseagreen69191111, ultra thick]
+(axis cs:5,1)
+--(axis cs:5,2)
+--(axis cs:6,2)
+--(axis cs:6,1)
+--(axis cs:5,1)
+--cycle;
+\path [draw=black, fill=darkcyan32143140, ultra thick]
+(axis cs:6,1)
+--(axis cs:6,2)
+--(axis cs:7,2)
+--(axis cs:7,1)
+--(axis cs:6,1)
+--cycle;
+\path [draw=black, fill=gold22022624, ultra thick]
+(axis cs:7,1)
+--(axis cs:7,2)
+--(axis cs:8,2)
+--(axis cs:8,1)
+--(axis cs:7,1)
+--cycle;
+\path [draw=black, fill=mediumseagreen89199100, ultra thick]
+(axis cs:8,1)
+--(axis cs:8,2)
+--(axis cs:9,2)
+--(axis cs:9,1)
+--(axis cs:8,1)
+--cycle;
+\path [draw=black, fill=mediumseagreen38172129, ultra thick]
+(axis cs:9,1)
+--(axis cs:9,2)
+--(axis cs:10,2)
+--(axis cs:10,1)
+--(axis cs:9,1)
+--cycle;
+\path [draw=black, fill=mediumseagreen47179123, ultra thick]
+(axis cs:0,2)
+--(axis cs:0,3)
+--(axis cs:1,3)
+--(axis cs:1,2)
+--(axis cs:0,2)
+--cycle;
+\path [draw=black, fill=teal44114142, ultra thick]
+(axis cs:1,2)
+--(axis cs:1,3)
+--(axis cs:2,3)
+--(axis cs:2,2)
+--(axis cs:1,2)
+--cycle;
+\path [draw=black, fill=darkcyan30152138, ultra thick]
+(axis cs:2,2)
+--(axis cs:2,3)
+--(axis cs:3,3)
+--(axis cs:3,2)
+--(axis cs:2,2)
+--cycle;
+\path [draw=black, fill=yellowgreen12921176, ultra thick]
+(axis cs:3,2)
+--(axis cs:3,3)
+--(axis cs:4,3)
+--(axis cs:4,2)
+--(axis cs:3,2)
+--cycle;
+\path [draw=black, fill=mediumseagreen79195105, ultra thick]
+(axis cs:4,2)
+--(axis cs:4,3)
+--(axis cs:5,3)
+--(axis cs:5,2)
+--(axis cs:4,2)
+--cycle;
+\path [draw=black, fill=darkslateblue5686139, ultra thick]
+(axis cs:5,2)
+--(axis cs:5,3)
+--(axis cs:6,3)
+--(axis cs:6,2)
+--(axis cs:5,2)
+--cycle;
+\path [draw=black, fill=darkslateblue7143122, ultra thick]
+(axis cs:6,2)
+--(axis cs:6,3)
+--(axis cs:7,3)
+--(axis cs:7,2)
+--(axis cs:6,2)
+--cycle;
+\path [draw=black, fill=darkslateblue6758131, ultra thick]
+(axis cs:7,2)
+--(axis cs:7,3)
+--(axis cs:8,3)
+--(axis cs:8,2)
+--(axis cs:7,2)
+--cycle;
+\path [draw=black, fill=indigo7233114, ultra thick]
+(axis cs:8,2)
+--(axis cs:8,3)
+--(axis cs:9,3)
+--(axis cs:9,2)
+--(axis cs:8,2)
+--cycle;
+\path [draw=black, fill=darkcyan35136141, ultra thick]
+(axis cs:9,2)
+--(axis cs:9,3)
+--(axis cs:10,3)
+--(axis cs:10,2)
+--(axis cs:9,2)
+--cycle;
+\path [draw=black, fill=darkslateblue5099141, ultra thick]
+(axis cs:0,3)
+--(axis cs:0,4)
+--(axis cs:1,4)
+--(axis cs:1,3)
+--(axis cs:0,3)
+--cycle;
+\path [draw=black, fill=darkslateblue48104141, ultra thick]
+(axis cs:1,3)
+--(axis cs:1,4)
+--(axis cs:2,4)
+--(axis cs:2,3)
+--(axis cs:1,3)
+--cycle;
+\path [draw=black, fill=gold25023034, ultra thick]
+(axis cs:2,3)
+--(axis cs:2,4)
+--(axis cs:3,4)
+--(axis cs:3,3)
+--(axis cs:2,3)
+--cycle;
+\path [draw=black, fill=indigo7225107, ultra thick]
+(axis cs:3,3)
+--(axis cs:3,4)
+--(axis cs:4,4)
+--(axis cs:4,3)
+--(axis cs:3,3)
+--cycle;
+\path [draw=black, fill=steelblue45111142, ultra thick]
+(axis cs:4,3)
+--(axis cs:4,4)
+--(axis cs:5,4)
+--(axis cs:5,3)
+--(axis cs:4,3)
+--cycle;
+\path [draw=black, fill=yellowgreen11620884, ultra thick]
+(axis cs:5,3)
+--(axis cs:5,4)
+--(axis cs:6,4)
+--(axis cs:6,3)
+--(axis cs:5,3)
+--cycle;
+\path [draw=black, fill=gold25023034, ultra thick]
+(axis cs:6,3)
+--(axis cs:6,4)
+--(axis cs:7,4)
+--(axis cs:7,3)
+--(axis cs:6,3)
+--cycle;
+\path [draw=black, fill=darkcyan35136141, ultra thick]
+(axis cs:7,3)
+--(axis cs:7,4)
+--(axis cs:8,4)
+--(axis cs:8,3)
+--(axis cs:7,3)
+--cycle;
+\path [draw=black, fill=darkslateblue5197141, ultra thick]
+(axis cs:8,3)
+--(axis cs:8,4)
+--(axis cs:9,4)
+--(axis cs:9,3)
+--(axis cs:8,3)
+--cycle;
+\path [draw=black, fill=darkcyan30158136, ultra thick]
+(axis cs:9,3)
+--(axis cs:9,4)
+--(axis cs:10,4)
+--(axis cs:10,3)
+--(axis cs:9,3)
+--cycle;
+\path [draw=black, fill=indigo68184, ultra thick]
+(axis cs:0,4)
+--(axis cs:0,5)
+--(axis cs:1,5)
+--(axis cs:1,4)
+--(axis cs:0,4)
+--cycle;
+\path [draw=black, fill=steelblue45111142, ultra thick]
+(axis cs:1,4)
+--(axis cs:1,5)
+--(axis cs:2,5)
+--(axis cs:2,4)
+--(axis cs:1,4)
+--cycle;
+\path [draw=black, fill=greenyellow20522429, ultra thick]
+(axis cs:2,4)
+--(axis cs:2,5)
+--(axis cs:3,5)
+--(axis cs:3,4)
+--(axis cs:2,4)
+--cycle;
+\path [draw=black, fill=darkslateblue7143122, ultra thick]
+(axis cs:3,4)
+--(axis cs:3,5)
+--(axis cs:4,5)
+--(axis cs:4,4)
+--(axis cs:3,4)
+--cycle;
+\path [draw=black, fill=mediumseagreen9120098, ultra thick]
+(axis cs:4,4)
+--(axis cs:4,5)
+--(axis cs:5,5)
+--(axis cs:5,4)
+--(axis cs:4,4)
+--cycle;
+\path [draw=black, fill=mediumseagreen41175127, ultra thick]
+(axis cs:5,4)
+--(axis cs:5,5)
+--(axis cs:6,5)
+--(axis cs:6,4)
+--(axis cs:5,4)
+--cycle;
+\path [draw=black, fill=darkslateblue5294141, ultra thick]
+(axis cs:6,4)
+--(axis cs:6,5)
+--(axis cs:7,5)
+--(axis cs:7,4)
+--(axis cs:6,4)
+--cycle;
+\path [draw=black, fill=gold21522625, ultra thick]
+(axis cs:7,4)
+--(axis cs:7,5)
+--(axis cs:8,5)
+--(axis cs:8,4)
+--(axis cs:7,4)
+--cycle;
+\path [draw=black, fill=darkslateblue6468135, ultra thick]
+(axis cs:8,4)
+--(axis cs:8,5)
+--(axis cs:9,5)
+--(axis cs:9,4)
+--(axis cs:8,4)
+--cycle;
+\path [draw=black, fill=yellowgreen14421467, ultra thick]
+(axis cs:9,4)
+--(axis cs:9,5)
+--(axis cs:10,5)
+--(axis cs:10,4)
+--(axis cs:9,4)
+--cycle;
+\path [draw=black, fill=mediumseagreen9620196, ultra thick]
+(axis cs:0,5)
+--(axis cs:0,6)
+--(axis cs:1,6)
+--(axis cs:1,5)
+--(axis cs:0,5)
+--cycle;
+\path [draw=black, fill=indigo7226108, ultra thick]
+(axis cs:1,5)
+--(axis cs:1,6)
+--(axis cs:2,6)
+--(axis cs:2,5)
+--(axis cs:1,5)
+--cycle;
+\path [draw=black, fill=yellowgreen15921756, ultra thick]
+(axis cs:2,5)
+--(axis cs:2,6)
+--(axis cs:3,6)
+--(axis cs:3,5)
+--(axis cs:2,5)
+--cycle;
+\path [draw=black, fill=gold21822624, ultra thick]
+(axis cs:3,5)
+--(axis cs:3,6)
+--(axis cs:4,6)
+--(axis cs:4,5)
+--(axis cs:3,5)
+--cycle;
+\path [draw=black, fill=darkslateblue6662133, ultra thick]
+(axis cs:4,5)
+--(axis cs:4,6)
+--(axis cs:5,6)
+--(axis cs:5,5)
+--(axis cs:4,5)
+--cycle;
+\path [draw=black, fill=gold22322724, ultra thick]
+(axis cs:5,5)
+--(axis cs:5,6)
+--(axis cs:6,6)
+--(axis cs:6,5)
+--(axis cs:5,5)
+--cycle;
+\path [draw=black, fill=darkcyan34137141, ultra thick]
+(axis cs:6,5)
+--(axis cs:6,6)
+--(axis cs:7,6)
+--(axis cs:7,5)
+--(axis cs:6,5)
+--cycle;
+\path [draw=black, fill=darkcyan36134141, ultra thick]
+(axis cs:7,5)
+--(axis cs:7,6)
+--(axis cs:8,6)
+--(axis cs:8,5)
+--(axis cs:7,5)
+--cycle;
+\path [draw=black, fill=indigo711799, ultra thick]
+(axis cs:8,5)
+--(axis cs:8,6)
+--(axis cs:9,6)
+--(axis cs:9,5)
+--(axis cs:8,5)
+--cycle;
+\path [draw=black, fill=darkslateblue6566134, ultra thick]
+(axis cs:9,5)
+--(axis cs:9,6)
+--(axis cs:10,6)
+--(axis cs:10,5)
+--(axis cs:9,5)
+--cycle;
+
+\end{groupplot}
+
+\end{tikzpicture}
+
+\end{document} 

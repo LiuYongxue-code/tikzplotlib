@@ -1,0 +1,494 @@
+\documentclass%[border=5mm]
+{standalone}
+\usepackage{tikz}
+\usepackage{xcolor,times}
+\usepackage{pgfplots}
+\usepgfplotslibrary{groupplots}
+\usetikzlibrary{patterns}
+\usepackage{pgfplots}
+\usepgfplotslibrary{groupplots}
+\usepgfplotslibrary{groupplots}
+\begin{document}
+%\pgfplotsset{width=18cm,height=10cm}
+
+\begin{tikzpicture}
+
+\definecolor{crimson2143940}{RGB}{214,39,40}
+\definecolor{darkgray176}{RGB}{176,176,176}
+\definecolor{darkorange25512714}{RGB}{255,127,14}
+\definecolor{darkturquoise23190207}{RGB}{23,190,207}
+\definecolor{forestgreen4416044}{RGB}{44,160,44}
+\definecolor{goldenrod18818934}{RGB}{188,189,34}
+\definecolor{gray127}{RGB}{127,127,127}
+\definecolor{mediumpurple148103189}{RGB}{148,103,189}
+\definecolor{orchid227119194}{RGB}{227,119,194}
+\definecolor{sienna1408675}{RGB}{140,86,75}
+\definecolor{steelblue31119180}{RGB}{31,119,180}
+
+\begin{groupplot}[group style={group size=4 by 1}]
+\nextgroupplot[
+scaled x ticks=manual:{}{\pgfmathparse{#1}},
+tick align=outside,
+tick pos=left,
+title={line widths (pts): 0.75, 1.5},
+x grid style={darkgray176},
+xmin=-0.45, xmax=9.45,
+xtick style={color=black},
+xticklabels={},
+y grid style={darkgray176},
+ymin=-0.45, ymax=9.45,
+ytick style={color=black}
+]
+\addplot [line width=0.3pt, steelblue31119180]
+table {%
+-0.45 1.77635683940025e-15
+9.45 1.77635683940025e-15
+};
+\addplot [semithick, steelblue31119180]
+table {%
+0 -0.449999999999999
+0 9.45
+};
+\addplot [line width=0.3pt, darkorange25512714]
+table {%
+-0.45 1
+9.45 1
+};
+\addplot [semithick, darkorange25512714]
+table {%
+1 -0.449999999999999
+1 9.45
+};
+\addplot [line width=0.3pt, forestgreen4416044]
+table {%
+-0.45 2
+9.45 2
+};
+\addplot [semithick, forestgreen4416044]
+table {%
+2 -0.449999999999999
+2 9.45
+};
+\addplot [line width=0.3pt, crimson2143940]
+table {%
+-0.45 3
+9.45 3
+};
+\addplot [semithick, crimson2143940]
+table {%
+3 -0.449999999999999
+3 9.45
+};
+\addplot [line width=0.3pt, mediumpurple148103189]
+table {%
+-0.45 4
+9.45 4
+};
+\addplot [semithick, mediumpurple148103189]
+table {%
+4 -0.449999999999999
+4 9.45
+};
+\addplot [line width=0.3pt, sienna1408675]
+table {%
+-0.45 5
+9.45 5
+};
+\addplot [semithick, sienna1408675]
+table {%
+5 -0.449999999999999
+5 9.45
+};
+\addplot [line width=0.3pt, orchid227119194]
+table {%
+-0.45 6
+9.45 6
+};
+\addplot [semithick, orchid227119194]
+table {%
+6 -0.449999999999999
+6 9.45
+};
+\addplot [line width=0.3pt, gray127]
+table {%
+-0.45 7
+9.45 7
+};
+\addplot [semithick, gray127]
+table {%
+7 -0.449999999999999
+7 9.45
+};
+\addplot [line width=0.3pt, goldenrod18818934]
+table {%
+-0.45 8
+9.45 8
+};
+\addplot [semithick, goldenrod18818934]
+table {%
+8 -0.449999999999999
+8 9.45
+};
+\addplot [line width=0.3pt, darkturquoise23190207]
+table {%
+-0.45 9
+9.45 9
+};
+\addplot [semithick, darkturquoise23190207]
+table {%
+9 -0.449999999999999
+9 9.45
+};
+
+\nextgroupplot[
+scaled x ticks=manual:{}{\pgfmathparse{#1}},
+scaled y ticks=manual:{}{\pgfmathparse{#1}},
+tick align=outside,
+tick pos=left,
+title={line widths (pts): 1.5, 4.5},
+x grid style={darkgray176},
+xmin=-0.45, xmax=9.45,
+xtick style={color=black},
+xticklabels={},
+y grid style={darkgray176},
+ymin=-0.45, ymax=9.45,
+ytick style={color=black},
+yticklabels={}
+]
+\addplot [semithick, steelblue31119180]
+table {%
+-0.450000000000001 1.77635683940025e-15
+9.45 1.77635683940025e-15
+};
+\addplot [line width=1.8pt, steelblue31119180]
+table {%
+-1.77635683940025e-15 -0.449999999999999
+-1.77635683940025e-15 9.45
+};
+\addplot [semithick, darkorange25512714]
+table {%
+-0.450000000000001 1
+9.45 1
+};
+\addplot [line width=1.8pt, darkorange25512714]
+table {%
+0.999999999999998 -0.449999999999999
+0.999999999999998 9.45
+};
+\addplot [semithick, forestgreen4416044]
+table {%
+-0.450000000000001 2
+9.45 2
+};
+\addplot [line width=1.8pt, forestgreen4416044]
+table {%
+2 -0.449999999999999
+2 9.45
+};
+\addplot [semithick, crimson2143940]
+table {%
+-0.450000000000001 3
+9.45 3
+};
+\addplot [line width=1.8pt, crimson2143940]
+table {%
+3 -0.449999999999999
+3 9.45
+};
+\addplot [semithick, mediumpurple148103189]
+table {%
+-0.450000000000001 4
+9.45 4
+};
+\addplot [line width=1.8pt, mediumpurple148103189]
+table {%
+4 -0.449999999999999
+4 9.45
+};
+\addplot [semithick, sienna1408675]
+table {%
+-0.450000000000001 5
+9.45 5
+};
+\addplot [line width=1.8pt, sienna1408675]
+table {%
+5 -0.449999999999999
+5 9.45
+};
+\addplot [semithick, orchid227119194]
+table {%
+-0.450000000000001 6
+9.45 6
+};
+\addplot [line width=1.8pt, orchid227119194]
+table {%
+6 -0.449999999999999
+6 9.45
+};
+\addplot [semithick, gray127]
+table {%
+-0.450000000000001 7
+9.45 7
+};
+\addplot [line width=1.8pt, gray127]
+table {%
+7 -0.449999999999999
+7 9.45
+};
+\addplot [semithick, goldenrod18818934]
+table {%
+-0.450000000000001 8
+9.45 8
+};
+\addplot [line width=1.8pt, goldenrod18818934]
+table {%
+8 -0.449999999999999
+8 9.45
+};
+\addplot [semithick, darkturquoise23190207]
+table {%
+-0.450000000000001 9
+9.45 9
+};
+\addplot [line width=1.8pt, darkturquoise23190207]
+table {%
+9 -0.449999999999999
+9 9.45
+};
+
+\nextgroupplot[
+axis background/.style={fill=black},
+tick align=outside,
+tick pos=left,
+x grid style={darkgray176},
+xmin=-0.45, xmax=9.45,
+xtick style={color=black},
+y grid style={darkgray176},
+ymin=-0.45, ymax=9.45,
+ytick style={color=black}
+]
+\addplot [line width=0.3pt, steelblue31119180]
+table {%
+-0.45 -4.44089209850063e-16
+9.45 -4.44089209850063e-16
+};
+\addplot [semithick, steelblue31119180]
+table {%
+0 -0.450000000000001
+0 9.45
+};
+\addplot [line width=0.3pt, darkorange25512714]
+table {%
+-0.45 0.999999999999999
+9.45 0.999999999999999
+};
+\addplot [semithick, darkorange25512714]
+table {%
+1 -0.450000000000001
+1 9.45
+};
+\addplot [line width=0.3pt, forestgreen4416044]
+table {%
+-0.45 2
+9.45 2
+};
+\addplot [semithick, forestgreen4416044]
+table {%
+2 -0.450000000000001
+2 9.45
+};
+\addplot [line width=0.3pt, crimson2143940]
+table {%
+-0.45 3
+9.45 3
+};
+\addplot [semithick, crimson2143940]
+table {%
+3 -0.450000000000001
+3 9.45
+};
+\addplot [line width=0.3pt, mediumpurple148103189]
+table {%
+-0.45 4
+9.45 4
+};
+\addplot [semithick, mediumpurple148103189]
+table {%
+4 -0.450000000000001
+4 9.45
+};
+\addplot [line width=0.3pt, sienna1408675]
+table {%
+-0.45 5
+9.45 5
+};
+\addplot [semithick, sienna1408675]
+table {%
+5 -0.450000000000001
+5 9.45
+};
+\addplot [line width=0.3pt, orchid227119194]
+table {%
+-0.45 6
+9.45 6
+};
+\addplot [semithick, orchid227119194]
+table {%
+6 -0.450000000000001
+6 9.45
+};
+\addplot [line width=0.3pt, gray127]
+table {%
+-0.45 7
+9.45 7
+};
+\addplot [semithick, gray127]
+table {%
+7 -0.450000000000001
+7 9.45
+};
+\addplot [line width=0.3pt, goldenrod18818934]
+table {%
+-0.45 8
+9.45 8
+};
+\addplot [semithick, goldenrod18818934]
+table {%
+8 -0.450000000000001
+8 9.45
+};
+\addplot [line width=0.3pt, darkturquoise23190207]
+table {%
+-0.45 9
+9.45 9
+};
+\addplot [semithick, darkturquoise23190207]
+table {%
+9 -0.450000000000001
+9 9.45
+};
+
+\nextgroupplot[
+axis background/.style={fill=black},
+scaled y ticks=manual:{}{\pgfmathparse{#1}},
+tick align=outside,
+tick pos=left,
+x grid style={darkgray176},
+xmin=-0.45, xmax=9.45,
+xtick style={color=black},
+y grid style={darkgray176},
+ymin=-0.45, ymax=9.45,
+ytick style={color=black},
+yticklabels={}
+]
+\addplot [semithick, steelblue31119180]
+table {%
+-0.450000000000001 -4.44089209850063e-16
+9.45 -4.44089209850063e-16
+};
+\addplot [line width=1.8pt, steelblue31119180]
+table {%
+-1.77635683940025e-15 -0.450000000000001
+-1.77635683940025e-15 9.45
+};
+\addplot [semithick, darkorange25512714]
+table {%
+-0.450000000000001 0.999999999999999
+9.45 0.999999999999999
+};
+\addplot [line width=1.8pt, darkorange25512714]
+table {%
+0.999999999999998 -0.450000000000001
+0.999999999999998 9.45
+};
+\addplot [semithick, forestgreen4416044]
+table {%
+-0.450000000000001 2
+9.45 2
+};
+\addplot [line width=1.8pt, forestgreen4416044]
+table {%
+2 -0.450000000000001
+2 9.45
+};
+\addplot [semithick, crimson2143940]
+table {%
+-0.450000000000001 3
+9.45 3
+};
+\addplot [line width=1.8pt, crimson2143940]
+table {%
+3 -0.450000000000001
+3 9.45
+};
+\addplot [semithick, mediumpurple148103189]
+table {%
+-0.450000000000001 4
+9.45 4
+};
+\addplot [line width=1.8pt, mediumpurple148103189]
+table {%
+4 -0.450000000000001
+4 9.45
+};
+\addplot [semithick, sienna1408675]
+table {%
+-0.450000000000001 5
+9.45 5
+};
+\addplot [line width=1.8pt, sienna1408675]
+table {%
+5 -0.450000000000001
+5 9.45
+};
+\addplot [semithick, orchid227119194]
+table {%
+-0.450000000000001 6
+9.45 6
+};
+\addplot [line width=1.8pt, orchid227119194]
+table {%
+6 -0.450000000000001
+6 9.45
+};
+\addplot [semithick, gray127]
+table {%
+-0.450000000000001 7
+9.45 7
+};
+\addplot [line width=1.8pt, gray127]
+table {%
+7 -0.450000000000001
+7 9.45
+};
+\addplot [semithick, goldenrod18818934]
+table {%
+-0.450000000000001 8
+9.45 8
+};
+\addplot [line width=1.8pt, goldenrod18818934]
+table {%
+8 -0.450000000000001
+8 9.45
+};
+\addplot [semithick, darkturquoise23190207]
+table {%
+-0.450000000000001 9
+9.45 9
+};
+\addplot [line width=1.8pt, darkturquoise23190207]
+table {%
+9 -0.450000000000001
+9 9.45
+};
+\end{groupplot}
+
+%\draw ({$(current bounding box.south west)!0.5!(current bounding box.south east)$}|-{$(current bounding box.south west)!0.98!(current bounding box.north west)$}) node[
+%  scale=0.6,
+%  anchor=north,
+%  text=black,
+%  rotate=0.0
+%]{Colors in the default prop\_cycle};
+\end{tikzpicture}
+
+\end{document} 
